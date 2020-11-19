@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Rock paper scissors</title>
 </head>
 <body>
-    Choose your fighter! <br><br>
-    <button id="player" onclick="rockPaperScissors('rock')">Rock</button><br><br>
-    <button id="player" onclick="rockPaperScissors('paper')">Paper</button><br><br>
-    <button id="player" onclick="rockPaperScissors('scissors')">Scissors</button><br><br>
-    <button id="fight">FIGHT!</button><br><br>
+<div class="bg-white" id="game">
+    <div class="flex space-x-1 m-8 text-center">
+    Let's play a simple game of rock, paper, scissors. <br>
+    Choose your fighter and see who wins! 
+    </div>
 
-    <div id="result"></div>
-    <div id="choices"></div>
-    <div id="yourScore"></div>
-    <div id="pcScore"></div>
-
+    <div class="flex space-x-4">
+        <button class="flex-1" type="button" id="rock" name="rock"><img class="max-h-16 m-8" src="images/rock.png"></button>
+        <button class="flex-1" type="button" id="paper" name="paper"><img class="max-h-16 m-8" src="images/paper.png"></button>
+        <button class="flex-1" type="button" id="scissors" name="scissors"><img class="max-h-16 m-8" src="images/scissors.png"></button>
+    </div>
+    <div>
+        <div class="text-center m-8 p-4 border-solid border-4 rounded border-red-400 bg-red-400 font-bold" id="fight">FIGHT! &#x2694;</div>
+    </div>
+    
+    <div class="m-8" id="scores">
+        <div id="result">Pick your first move first.</div>
+        <div id="choices"></div>
+        <div id="yourScore">Your score: 0.</div>
+        <div id="pcScore">Your opponents score: 0.</div>
+    </div>
+</div>
 </body>
 </html>
