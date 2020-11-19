@@ -5,7 +5,6 @@ let pcScore = 0;
 let draw = 0;
 let choice = '';
 
-
 // Getting the value of the clicked button and adding as an array to let choice
 Array.from(document.querySelectorAll('button')).forEach(($btn) =>
     $btn.addEventListener(
@@ -19,7 +18,7 @@ Array.from(document.querySelectorAll('button')).forEach(($btn) =>
 
 // Starting the function after clicking "fight"
 // Using the variable choice to determine who wins
-document.getElementById('fight').addEventListener("click", function () {
+document.getElementById('play').addEventListener("click", function () {
 
     // Randomising an outcome of the opponent
     const randomNumber = Math.floor(Math.random() * 3);
@@ -55,6 +54,15 @@ document.getElementById('fight').addEventListener("click", function () {
         document.getElementById("choices").innerHTML = "You chose " + choice + " and the computer chose " + rps[randomNumber] + ".";
         document.getElementById("yourScore").innerHTML = "Your score: " + persScore.toString() + ".";
         document.getElementById("pcScore").innerHTML = "Your opponents score: " + pcScore.toString() + ".";  
-        document.getElementById("draw").innerHTML = "Number of draws: " + draw.toString() + ".";  
-    })
+        document.getElementById("test").innerHTML = "Number of draws: " + draw.toString() + ".";  
+
+
+        // Changing the fight-button innerHTML -> not working?
+        document.getElementById("play").innerHTML = 'PLAY AGAIN? &#x2694;';
+        
+})
+
+        
+
+
 })();
