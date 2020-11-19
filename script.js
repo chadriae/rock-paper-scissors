@@ -26,33 +26,58 @@ Array.from(document.querySelectorAll('button')).forEach(($btn) =>
 // Using the variable choice to determine who wins
 document.getElementById('play').addEventListener("click", function () {
 
+
+
     // Randomising an outcome of the opponent
     const randomNumber = Math.floor(Math.random() * 3);
     const rps = ["rock", "paper", "scissors"];
 
     // Declaring all the outcomes
     if (choice == rps[randomNumber]) {
-    document.getElementById("result").innerHTML = "It's a draw!";
+    // Variable element to add specific styling (text color) to each situation
+    //  and add an HTML text.
+    let element = document.getElementById("result")
+    element.innerHTML = "It's a draw!";
+    element.classList.remove("text-green-500");
+    element.classList.remove("text-red-500");
+    element.classList.add("text-blue-500");
+
     draw ++;
     }
 
     else if (choice == 'paper' && randomNumber === 0) {
-    document.getElementById("result").innerHTML = "You won!";
+    let element = document.getElementById("result")
+    element.innerHTML = "You won!";
+    element.classList.remove("text-red-500");
+    element.classList.remove("text-blue-500");
+    element.classList.add("text-green-500");
     persScore ++;
     }
 
     else if (choice == 'scissors' && randomNumber === 1) {
-    document.getElementById("result").innerHTML = "You won!";
+    let element = document.getElementById("result")
+    element.innerHTML = "You won!";
+    element.classList.remove("text-red-500");
+    element.classList.remove("text-blue-500");
+    element.classList.add("text-green-500");  
     persScore ++;
     }
 
     else if (choice == 'rock' && randomNumber === 2) {
-    document.getElementById("result").innerHTML = "You won!";
+    let element = document.getElementById("result")
+    element.innerHTML = "You won!";
+    element.classList.remove("text-red-500");
+    element.classList.remove("text-blue-500");
+    element.classList.add("text-green-500");
     persScore ++;
     }
 
     else {
-    document.getElementById("result").innerHTML = "You lost.";
+    let element = document.getElementById("result")
+    element.innerHTML = "You lost.";
+    element.classList.remove("text-blue-500");
+    element.classList.remove("text-green-500");
+    element.classList.add("text-red-500");
     pcScore ++;
     }
 
@@ -60,7 +85,7 @@ document.getElementById('play').addEventListener("click", function () {
     document.getElementById("choices").innerHTML = "You chose " + choice + " and the computer chose " + rps[randomNumber] + ".";
     document.getElementById("yourScore").innerHTML = "Your score: " + persScore.toString() + ".";
     document.getElementById("pcScore").innerHTML = "Your opponents score: " + pcScore.toString() + ".";  
-    document.getElementById("test").innerHTML = "Number of draws: " + draw.toString() + ".";  
+    //document.getElementById("draws").innerHTML = "Number of draws: " + draw.toString() + ".";  
 
 
     // Changing the fight-button innerHTML
