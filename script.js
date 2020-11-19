@@ -1,3 +1,9 @@
+// TO DO:
+// - restart button
+// - differtent styling for different results 
+// - error if not clicked a button
+
+
 (() => {
 // Declaring variables
 let persScore = 0;
