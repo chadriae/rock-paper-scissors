@@ -1,7 +1,5 @@
-// TO DO:
-// - restart button
-// - differtent styling for different results 
-// - error if not clicked a button
+// TODO restart button
+// TODO error if not clicked a button
 
 
 (() => {
@@ -12,7 +10,8 @@ let draw = 0;
 let choice = '';
 
 // Getting the value of the clicked button and adding as an array to let choice
-Array.from(document.querySelectorAll('button')).forEach(($btn) =>
+// querySelectorAll op class
+Array.from(document.querySelectorAll(".action")).forEach(($btn) =>
     $btn.addEventListener(
       'click',
       () => {
@@ -26,8 +25,6 @@ Array.from(document.querySelectorAll('button')).forEach(($btn) =>
 // Using the variable choice to determine who wins
 document.getElementById('play').addEventListener("click", function () {
 
-
-
     // Randomising an outcome of the opponent
     const randomNumber = Math.floor(Math.random() * 3);
     const rps = ["rock", "paper", "scissors"];
@@ -36,6 +33,7 @@ document.getElementById('play').addEventListener("click", function () {
     if (choice == rps[randomNumber]) {
     // Variable element to add specific styling (text color) to each situation
     //  and add an HTML text.
+    // element.style....? ipv add/remove classList
     let element = document.getElementById("result")
     element.innerHTML = "It's a draw!";
     element.classList.remove("text-green-500");

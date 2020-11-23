@@ -13,10 +13,6 @@ body {
   background-color: lightblue;
 }
 
-#play {
-  cursor: pointer;
-}
-
-button:focus {
+.action:focus {
   background-color: yellow;
 }
