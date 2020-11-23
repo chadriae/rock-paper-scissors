@@ -30,6 +30,11 @@ These are also nice-to-have features but I did not start on these yet:
 - Add even more options (but avoid using 100 if statements)
 - Can you make a player win 100% of the games? Or win 75%? (not to raise any suspicion)
 
+### TODO
+
+- Restart the game button
+- Get an error message when no button is selected
+
 ## Result
 
 [Check it out!](https://chadriae.github.io/rock-paper-scissors/)
